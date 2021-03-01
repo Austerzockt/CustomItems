@@ -1,0 +1,7 @@
+name: CustomItems
+version: ${project.version}
+main: at.auster.customitems.CustomItems
+api-version: 1.16
+prefix: CI
+authors: [ Auster ]
+description: API to Create Custom Items
