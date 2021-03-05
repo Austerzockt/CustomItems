@@ -1,6 +1,7 @@
 package at.auster.customitems.api.items;
 
 import at.auster.customitems.items.CustomItem;
+import at.auster.customitems.utils.DebugLogger;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import org.bukkit.ChatColor;
@@ -28,7 +29,10 @@ public class ItemManager {
     public final void load(Class<? extends CustomItem>... clazz) {
             Arrays.stream(clazz).forEach(i -> {
                 try {
+                    DebugLogger.debug("ItemMangager REGISTERING "+ i.getSimpleName());
                     items.add((CustomItem) i.getConstructors()[0].newInstance());
+                    DebugLogger.debug("ItemManager REGISTERED "+ i.getSimpleName());
+
                 } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
                     e.printStackTrace();
                 }
