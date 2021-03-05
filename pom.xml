@@ -53,9 +53,10 @@
                                     <shadedPattern>shaded.nbtapi</shadedPattern>
                                 </relocation>
                                 <relocation>
-                                    <pattern>org.reflections</pattern>
-                                    <shadedPattern>shaded.org.reflections</shadedPattern>
+                                    <pattern>io.github.classgraph</pattern>
+                                    <shadedPattern>shaded.classgraph</shadedPattern>
                                 </relocation>
+
 
                             </relocations>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
@@ -93,11 +94,7 @@
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.reflections</groupId>
-            <artifactId>reflections</artifactId>
-            <version>0.9.12</version>
-        </dependency>
+
         <dependency>
             <groupId>de.tr7zw</groupId>
             <artifactId>item-nbt-api</artifactId>
@@ -109,10 +106,6 @@
             <version>1.16.5-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>io.github.classgraph</groupId>
-            <artifactId>classgraph</artifactId>
-            <version>4.8.102</version>
-        </dependency>
+
     </dependencies>
 </project>
