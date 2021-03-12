@@ -5,9 +5,11 @@
 *.ipr
 *.iws
 
+.project
+.classpath
+.settings/*
 # IntelliJ
 out/
-
 # Compiled class file
 *.class
 

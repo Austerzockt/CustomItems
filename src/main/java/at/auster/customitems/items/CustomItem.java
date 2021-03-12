@@ -18,13 +18,14 @@ public abstract class CustomItem {
     private String itemStackName = ChatColor.RED + "UNFINISHED " + this.getClass().getName();
     private boolean enchanted = false;
     private boolean canBreakBlocks = false;
-    private int modelId =  0;
+    private int modelId = 0;
     private List<String> lore = null;
     private Material material = Material.DIRT;
     private boolean canBePlaced = false;
     private boolean unbreakable = false;
     private boolean stackable = false;
     private boolean hideEnchantments = false;
+
     public CustomItem() {
     }
 
@@ -34,27 +35,31 @@ public abstract class CustomItem {
 
     public abstract void leftClickAirAction(Player player, ItemStack itemStack);
 
-    public abstract void leftClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block, ItemStack itemStack);
+    public abstract void leftClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block,
+            ItemStack itemStack);
 
     public abstract void rightClickAirAction(Player player, ItemStack itemStack);
 
-    public abstract void rightClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block, ItemStack itemStack);
+    public abstract void rightClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block,
+            ItemStack itemStack);
 
     public abstract void shiftLeftClickAirAction(Player player, ItemStack itemStack);
 
-    public abstract void shiftLeftClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block, ItemStack itemStack);
+    public abstract void shiftLeftClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block,
+            ItemStack itemStack);
 
     public abstract void shiftRightClickAirAction(Player player, ItemStack itemStack);
 
-    public abstract void shiftRightClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block, ItemStack itemStack);
+    public abstract void shiftRightClickBlockAction(Player player, PlayerInteractEvent playerInteractEvent, Block block,
+            ItemStack itemStack);
 
+    public abstract void hitEntityAction(Player player, EntityDamageByEntityEvent entityDamageByEntityEvent,
+            Entity entity, ItemStack itemStack);
 
-    public abstract void hitEntityAction(Player player, EntityDamageByEntityEvent entityDamageByEntityEvent, Entity entity, ItemStack itemStack);
-
-    public abstract void breakBlockAction(Player player, BlockBreakEvent blockBreakEvent, Block var3, ItemStack itemStack);
+    public abstract void breakBlockAction(Player player, BlockBreakEvent blockBreakEvent, Block var3,
+            ItemStack itemStack);
 
     // GETTERS
-
 
     public String getItemStackName() {
         return itemStackName;

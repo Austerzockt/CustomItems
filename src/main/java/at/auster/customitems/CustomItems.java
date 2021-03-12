@@ -1,12 +1,9 @@
 package at.auster.customitems;
 
+import org.bukkit.plugin.java.JavaPlugin;
+
 import at.auster.customitems.api.items.ItemManager;
 import at.auster.customitems.utils.DebugLogger;
-import org.bukkit.Bukkit;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.Debug;
-
-import javax.swing.*;
 
 public class CustomItems extends JavaPlugin {
     private static ItemManager itemManager;
@@ -16,6 +13,7 @@ public class CustomItems extends JavaPlugin {
         DebugLogger.init(getLogger());
         DebugLogger.isDebug = false;
         itemManager = new ItemManager();
+
     }
 
     public static ItemManager getItemManager() {
