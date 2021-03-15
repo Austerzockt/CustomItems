@@ -10,6 +10,7 @@
     <packaging>jar</packaging>
 
     <name>CustomItems</name>
+    
 
     <description>API to Create Custom Items</description>
     <properties>
@@ -18,14 +19,14 @@
     </properties>
 
     <build>
+        <finalName>CustomItems</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.0.2</version>
-                <configuration>
-                    <outputDirectory>C:\Users\simon\Documents\Servers\Dev1165\plugins</outputDirectory>
-                </configuration>
+                
+
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
