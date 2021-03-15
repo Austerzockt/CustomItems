@@ -32,9 +32,9 @@ public class ItemManager {
     public final void load(Class<? extends CustomItem>... clazz) {
         Arrays.stream(clazz).forEach(i -> {
             try {
-                DebugLogger.debug("ItemMangager REGISTERING " + i.getSimpleName());
+                DebugLogger.debug(getClass(), "REGISTERING " + i.getSimpleName());
                 items.add((CustomItem) i.getConstructors()[0].newInstance());
-                DebugLogger.debug("ItemManager REGISTERED " + i.getSimpleName());
+                DebugLogger.debug( getClass(), "REGISTERED " + i.getSimpleName());
 
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
                 e.printStackTrace();
