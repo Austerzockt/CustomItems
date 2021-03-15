@@ -14,6 +14,9 @@ import org.bukkit.inventory.ShapedRecipe;
 import java.util.List;
 
 public abstract class CustomItem {
+    public CustomItem() {
+
+    }
     private String name = ChatColor.RED + "UNFINISHED " + this.getClass().getName();
     private String itemStackName = ChatColor.RED + "UNFINISHED " + this.getClass().getName();
     private boolean enchanted = false;
@@ -26,8 +29,7 @@ public abstract class CustomItem {
     private boolean stackable = false;
     private boolean hideEnchantments = false;
 
-    public CustomItem() {
-    }
+
 
     public abstract void onItemStackCreate(ItemStack itemStack);
 
